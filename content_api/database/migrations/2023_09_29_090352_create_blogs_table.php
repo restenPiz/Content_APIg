@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
-            $table->string('Title');
-            $table->string('Title_blog');
-            $table->string('Subtitle_blog');
-            $table->string('Category');
+            $table->string('Title',1000);
+            $table->string('Title_blog',1000);
+            $table->string('Subtitle_blog',1000);
+            $table->string('Category',1000);
             //*Inicio da coluna responsavel por salvar a imagem
-            $table->string('Another');
+            $table->string('Another',1000);
             $table->timestamps();
         });
     }
