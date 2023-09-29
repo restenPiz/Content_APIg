@@ -59,5 +59,27 @@ class fileController extends Controller
             $foto = $request->file('Another');
             $foto->move('Ficheiros/', $filename);
         }
+        $contents->save();
+
+        return response();
+    }
+    //*Inicio do metodo para eliminar os dados
+    public function deleteFile($id)
+    {
+        //*Encontrando os dados
+        $contents=Blog::findOrFail($id);
+
+        $contents->delete();
+
+        return response();
+    }
+    //*Inicio do metodo que retorna todos os dados
+    public function allFile()
+    {
+        $contents=Blog::all();
+
+        return response([
+            'contents'=>$contents
+        ]);
     }
 }
