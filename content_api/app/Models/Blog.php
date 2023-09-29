@@ -14,6 +14,6 @@ class Blog extends Model
 
     //*Incluindo as colunas
     protected $fillable=[
-        
+        'Title','Subtitle_blog','Title_blog','Another','Category'
     ];
 }
