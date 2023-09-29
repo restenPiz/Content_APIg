@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blog extends Model
 {
     use HasFactory;
+
+    //Nome da tabela
+    protected $table='blogs';
 }
