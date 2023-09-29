@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('Title_blog');
             $table->string('Subtitle_blog');
             $table->string('Category');
+            //*Inicio da coluna responsavel por salvar a imagem
+            $table->string('Another');
             $table->timestamps();
         });
     }
