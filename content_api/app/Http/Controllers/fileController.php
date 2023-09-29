@@ -61,7 +61,7 @@ class fileController extends Controller
         }
         $contents->save();
 
-        return response()->json(['message' => 'O blog foi actualizado com sucesso!'], 201);
+        return response()->json(['message' => 'O blog foi actualizado com sucesso!'], 200);
     }
     //*Inicio do metodo para eliminar os dados
     public function deleteFile($id)
@@ -71,7 +71,7 @@ class fileController extends Controller
 
         $contents->delete();
 
-        return response()->json(['message' => 'O blog foi eliminado com sucesso!'], 201);
+        return response()->json(['message' => 'O blog foi eliminado com sucesso!'], 204);
     }
     //*Inicio do metodo que retorna todos os dados
     public function allFile()
@@ -80,7 +80,7 @@ class fileController extends Controller
         $contents=Blog::all();
 
         return response([
-            'contents'=>$contents
-        ]);
+            'contents'=>$contents,
+        ],200);
     }
 }
