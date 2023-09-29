@@ -6,5 +6,8 @@ use Illuminate\Http\Request;
 
 class fileController extends Controller
 {
-    //
+    public function storeFile()
+    {
+        
+    }
 }
