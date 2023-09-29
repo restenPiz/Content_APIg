@@ -9,6 +9,11 @@ class Blog extends Model
 {
     use HasFactory;
 
-    //Nome da tabela
+    //*Nome da tabela
     protected $table='blogs';
+
+    //*Incluindo as colunas
+    protected $fillable=[
+        
+    ];
 }
