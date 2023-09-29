@@ -76,6 +76,7 @@ class fileController extends Controller
     //*Inicio do metodo que retorna todos os dados
     public function allFile()
     {
+        //*Selecionando todos os dados
         $contents=Blog::all();
 
         return response([
