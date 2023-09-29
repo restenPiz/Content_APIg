@@ -32,7 +32,7 @@ class fileController extends Controller
         $contents->save();
 
         //*Inicio do metodo para fazer o redirecionamento
-        return response();
+        return response()->json(['message' => 'O blog foi criado com sucesso'], 201);
     }
     //*Inicio do metodo para fazer o update dos dados
     public function updateFile($id, Request $request)
@@ -61,7 +61,7 @@ class fileController extends Controller
         }
         $contents->save();
 
-        return response();
+        return response()->json(['message' => 'O blog foi actualizado com sucesso!'], 201);
     }
     //*Inicio do metodo para eliminar os dados
     public function deleteFile($id)
@@ -71,7 +71,7 @@ class fileController extends Controller
 
         $contents->delete();
 
-        return response();
+        return response()->json(['message' => 'O blog foi eliminado com sucesso!'], 201);
     }
     //*Inicio do metodo que retorna todos os dados
     public function allFile()
