@@ -12,7 +12,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //Adicionando o metodo para evitar erros ao migrar
+        //*Adicionando o metodo para evitar erros ao migrar
         Schema::defaultStringLength(191);
     }
 
