@@ -79,6 +79,7 @@ class fileController extends Controller
         //*Selecionando todos os dados
         $contents=Blog::all();
 
+        //?Retornando as resposta
         return response([
             'contents'=>$contents,
         ],200);
