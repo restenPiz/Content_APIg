@@ -19,5 +19,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //*Inicio das rotas da api
-Route::get('/dashboard', [dashboardController::class, 'index'])->middleware(['auth'])->name('dashboard');
+Route::get('/store', [fileController::class, 'storeFile'])->name('store');
+Route::get('/update/{id}', [fileController::class, 'updateFile'])->name('update');
+Route::get('/delete/{id}', [fileController::class, 'deleteFile'])->name('delete');
+Route::get('/allFile', [fileController::class, 'allFile'])->name('all');
 
